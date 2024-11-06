@@ -7,6 +7,7 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 function filtraNomi(nomi, iniziale){
     const newArray = [];
     for(let i = 0; i < nomi.length; i++){
+        const primaLettera = nomi[i].charAt(0);
         if(primaLettera === iniziale){
             newArray.push(nomi[i]);
         }
@@ -15,8 +16,7 @@ function filtraNomi(nomi, iniziale){
 }
 
 // Invoca la funzione qui e stampa il risultato in console
-const arrayFiltrato = filtraNomi(names, "a");
+const arrayFiltrato = filtraNomi(names, "A");
 console.log(arrayFiltrato);
-
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
