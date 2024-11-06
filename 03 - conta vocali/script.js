@@ -4,9 +4,21 @@ const word = 'javascript';
 
 
 // Dichiara la funzione qui.
+function contaVocali(parola){
+    const vocali = "aeiou";
+    let inizializzatore = 0;
 
+    for(let i = 0; i < parola.length; i++){
+        if(vocali.includes(parola[i])){
+            inizializzatore++
+        }
+    }
+    return inizializzatore;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
+const stringa = contaVocali(word);
+console.log(stringa);
 
 
 
